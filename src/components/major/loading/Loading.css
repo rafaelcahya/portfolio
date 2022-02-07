@@ -1,0 +1,17 @@
+.loading{
+    background-color: rgb(209, 213, 219);
+    height: 2px;
+    animation: loading 2s infinite ease-in;
+}
+
+@keyframes loading {
+    0%{
+        width: 0px;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 0px;
+    }
+}

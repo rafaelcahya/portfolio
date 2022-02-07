@@ -1,0 +1,133 @@
+.navbar{
+    width: fit-content;
+}
+
+.navbar div:hover{
+    background-color: #181818;
+}
+
+.reveal p{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.reveal p:nth-child(1){
+    animation: reveal 6s infinite;
+}
+
+@keyframes reveal {
+    0%{
+        padding-top: 10px;
+        opacity: 0;
+    }
+    20%{
+        padding-top: 20px;
+        opacity: 1;
+    }
+    60%{
+        padding-top: 20px;
+        opacity: 1;
+    }
+    75%{
+        padding-top: 10px;
+        opacity: 0;
+    }
+    100%{
+        padding-top: 10px;
+        opacity: 0;
+    }
+}
+
+.reveal p:nth-child(2){
+    animation: reveal2 6s infinite;
+}
+
+@keyframes reveal2 {
+    0%{
+        padding-top: 20px;
+        opacity: 1;
+    }
+    20%{
+        padding-top: 10px;
+        opacity: 0;
+    }
+    60%{
+        padding-top: 10px;
+        opacity: 0;
+    }
+    80%{
+        padding-top: 20px;
+        opacity: 1;
+    }
+    100%{
+        padding-top: 20px;
+        opacity: 1;
+    }
+}
+
+.pulse {
+    box-shadow: 0 0 0 rgba(110, 231, 183, 0.4);
+    animation: pulse 2s infinite;
+  }
+
+@keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(110, 231, 183, 0.4);
+      box-shadow: 0 0 0 0 rgba(110, 231, 183, 0.4);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(110, 231, 183, 0);
+        box-shadow: 0 0 0 10px rgba(110, 231, 183, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }
+
+.navigation{
+    top: 45%;
+    transform: translateY(-45%);
+}
+
+.navigation-button{
+    transition: 300ms;
+}
+
+.navigation-button:hover{
+    padding: 1rem;
+    margin-top: -25px;
+    transition: 300ms;
+}
+
+.navigation-text{
+    opacity: 0;
+    transition: 500ms;
+    position: absolute;
+    top: -40px;
+}
+
+.navigation-box:hover .navigation-text{
+    opacity: 1;
+    transition: 500ms;
+    margin-top: -10px;
+}
+
+.status{
+    bottom: 30px;
+}
+
+.logo{
+    transition: 300ms;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.status:hover .logo{
+    margin-bottom: 50px;
+    transition: 300ms;
+    transform: scale(1);
+    opacity: 1;
+}

@@ -1,0 +1,58 @@
+@font-face {
+    font-family: poppins_100;
+    src: url('../asset/font/poppins/Poppins-Thin.ttf');
+}
+
+.text_poppins_100{
+    font-family: poppins_100;
+    line-height: 1.75rem;
+}
+
+@font-face {
+    font-family: poppins_200;
+    src: url('../asset/font/poppins/Poppins-Light.ttf');
+}
+
+.text_poppins_200{
+    font-family: poppins_200;
+    line-height: 1.75rem;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url('../asset/font/poppins/Poppins-Regular.ttf');
+}
+
+.text_poppins{
+    font-family: poppins;
+}
+
+@font-face {
+    font-family: poppins_400;
+    src: url('../asset/font/poppins/Poppins-Medium.ttf');
+}
+
+.text_poppins_400{
+    font-family: poppins_400;
+    line-height: 1.75rem;
+}
+
+@font-face {
+    font-family: poppins_500;
+    src: url('../asset/font/poppins/Poppins-SemiBold.ttf');
+}
+
+.text_poppins_500{
+    font-family: poppins_500;
+    line-height: 1.75rem;
+}
+
+@font-face {
+    font-family: poppins_700;
+    src: url('../asset/font/poppins/Poppins-Bold.ttf');
+}
+
+.text_poppins_700{
+    font-family: poppins_700;
+    line-height: 1.75rem;
+}
