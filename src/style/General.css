@@ -70,22 +70,32 @@
 .pulse {
     box-shadow: 0 0 0 rgba(110, 231, 183, 0.4);
     animation: pulse 2s infinite;
-  }
+}
 
 @keyframes pulse {
     0% {
-      -moz-box-shadow: 0 0 0 0 rgba(110, 231, 183, 0.4);
-      box-shadow: 0 0 0 0 rgba(110, 231, 183, 0.4);
+        -moz-box-shadow: 0 0 0 0 rgba(110, 231, 183, 0.4);
+        box-shadow: 0 0 0 0 rgba(110, 231, 183, 0.4);
     }
-    70% {
+    100% {
         -moz-box-shadow: 0 0 0 10px rgba(110, 231, 183, 0);
         box-shadow: 0 0 0 10px rgba(110, 231, 183, 0);
     }
-    100% {
-        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+}
+
+.pulse-red {
+    box-shadow: 0 0 0 rgba(254, 202, 202, 0.4);
+    animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+    0% {
+        box-shadow: 0 0 0 0 rgba(254, 202, 202, 0.4);
     }
-  }
+    100% {
+        box-shadow: 0 0 0 30px rgba(254, 202, 202, 0);
+    }
+}
 
 .navigation{
     top: 45%;

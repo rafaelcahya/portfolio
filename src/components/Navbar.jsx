@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
 
 import home_icon from '../asset/icon/home.svg'
 import gallery_icon from '../asset/icon/aperture.svg'
@@ -7,10 +8,11 @@ import project_icon from '../asset/icon/layers.svg'
 import code_icon from '../asset/icon/code.svg'
 
 export default function Navbar() {
+    AOS.init();
     return (
-        <div className='flex justify-center'>
+        <div className='flex justify-center' data-aos="fade-down" data-aos-duration="500">
             <div className='navbar frosted_glass fixed top-10 flex items-center gap-7 px-5 py-2 rounded-lg'>
-                <Link to="/">
+                <Link to="/" >
                     <div className='p-3 rounded-xl'>
                         <img src={home_icon} alt="" width={20} />
                     </div>

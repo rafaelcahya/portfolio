@@ -48,7 +48,7 @@ export default class TabPanel extends Component {
         }
         return (
             <div className="tab-panel text-gray-300 flex flex-col gap-10">
-                <div className="tab-panel__header text_poppins_400 flex justify-center gap-10 cursor-pointer">
+                <div className="tab-panel__header text_poppins text-14 flex justify-center gap-10 cursor-pointer">
                     {this._renderTabs()}
                 </div>
                 <div className="tab-panel__content">

@@ -5,7 +5,7 @@ export default class EventModel extends Component {
     render() {
         const {article} = this.props
         return (
-            <div className='timeline-item text-gray-300'>
+            <div className='timeline-item text-gray-300' data-aos="fade-zoom-in" data-aos-duration="500" data-aos-offset="0">
                 <div>
                     <p className='text-13 text_poppins_200 letterspacing-1'>{moment(article.fields.date).format('ll')}</p>
                     <p className='text_poppins_400'>{article.fields.title}</p>

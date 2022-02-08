@@ -21,13 +21,13 @@ export default class Project extends Component {
                 <div className='flex flex-col gap-48 my-64'>
                     <CurrentlyProjectNote/>
                     <TabPanel onTabChange={this._handleTabChange}>
+                        <div title="Grid view">
+                            <UIGridView/>
+                        </div>
                         <div title="Timeline view">
                             <div className="timeline-container">
                                 <UITimelineView/>
                             </div>
-                        </div>
-                        <div title="Grid view">
-                            <UIGridView/>
                         </div>
                     </TabPanel>
                 </div>
