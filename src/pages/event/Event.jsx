@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import client from '../../client';
 import Loading from '../../components/major/loading/Loading';
+import Topbar from '../../components/major/top bar/Topbar';
 import Navbar from '../../components/Navbar';
 
 import EventModel from './EventModel';
@@ -26,6 +27,7 @@ export default class Event extends Component {
         }
         return (
             <>
+                <Topbar/>
                 <Navbar/>
                 <div className='my-48'>
                     <div className="timeline-container">

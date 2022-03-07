@@ -22,11 +22,11 @@ function App() {
     return (
         <>
             <HelmetProvider>
-            <Helmet>
-                <style>{'body { background-color: black; }'}</style>
-            </Helmet>
-            {
-                navigator.onLine ? (
+                <Helmet>
+                    <style>{'body { background-color: black; }'}</style>
+                </Helmet>
+                {
+                    navigator.onLine ? (
                         <Router>
                             <Switch>
                                 <Route path='/' exact component={Home} />
@@ -35,10 +35,11 @@ function App() {
                                 <Route path="/code" exact component={Code}/>
                                 <Route path="/event" exact component={Event}/>
                                 <Route path="/project/progress/:slug" exact component={Commit}/>
+                                <Route path="/offline" exact component={Offline}/>
                             </Switch>
                         </Router>
-                ) : (<Offline/>)
-            }
+                    ) : (<Offline/>)
+                }
             </HelmetProvider>
         </>
     )

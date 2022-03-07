@@ -84,16 +84,18 @@
 }
 
 .pulse-red {
-    box-shadow: 0 0 0 rgba(254, 202, 202, 0.4);
     animation: pulse-red 2s infinite;
 }
 
 @keyframes pulse-red {
     0% {
-        box-shadow: 0 0 0 0 rgba(254, 202, 202, 0.4);
+        background-color: rgba(254, 202, 202, 0.2);
+    }
+    50% {
+        background-color: rgba(254, 202, 202, 0);
     }
     100% {
-        box-shadow: 0 0 0 30px rgba(254, 202, 202, 0);
+        background-color: rgba(254, 202, 202, 0.2);
     }
 }
 
@@ -139,5 +141,16 @@
     margin-bottom: 50px;
     transition: 300ms;
     transform: scale(1);
+    opacity: 1;
+}
+
+.topbar-content{
+    transition: 300ms;
+    opacity: 0;
+}
+
+.topbar-content:hover{
+    padding-top: 1.25rem;
+    transition: 300ms;
     opacity: 1;
 }

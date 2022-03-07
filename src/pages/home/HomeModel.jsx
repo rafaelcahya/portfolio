@@ -28,7 +28,7 @@ export default class HomeModel extends Component {
     const {hour} = this.state
     AOS.init();
     return (
-      <div className='text-white text_poppins_200 text-13 letterspacing-1 flex flex-col items-center gap-72 py-10'>
+      <div className='text-white text_poppins_200 text-12 letterspacing-1 flex flex-col items-center gap-72 py-10'>
         <div className='reveal'>
           {
             hour < 10 ? <p>Hello, Good Morning</p> :

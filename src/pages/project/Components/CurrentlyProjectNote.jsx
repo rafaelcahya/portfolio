@@ -22,6 +22,6 @@ export default class CurrentlyProjectNote extends Component {
         if(!articles){
             return <Loading/>
         }
-        return <div>{articles}</div>;
+        return <>{articles}</>;
     }
 }

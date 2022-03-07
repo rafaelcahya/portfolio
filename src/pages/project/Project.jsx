@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TabPanel from '../../components/major/tab/TabPanel';
+import Topbar from '../../components/major/top bar/Topbar';
 import Navbar from '../../components/Navbar';
 import CurrentlyProjectNote from './Components/CurrentlyProjectNote';
 import UIGridView from './Grid/GridView';
@@ -16,9 +17,10 @@ export default class Project extends Component {
 
     render() {
         return (
-            <div>
+            <>
+                <Topbar/>
                 <Navbar/>
-                <div className='flex flex-col gap-48 my-64'>
+                <div className='flex flex-col gap-48 my-48'>
                     <CurrentlyProjectNote/>
                     <TabPanel onTabChange={this._handleTabChange}>
                         <div title="Grid view">
@@ -31,7 +33,7 @@ export default class Project extends Component {
                         </div>
                     </TabPanel>
                 </div>
-            </div>
+            </>
         )
     }
 }

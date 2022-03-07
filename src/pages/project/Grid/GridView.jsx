@@ -25,11 +25,9 @@ export default class GridView extends Component {
             return <Loading/>
         }
         return (
-            <>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-32 mx-20 xl:mx-64 my-10'>
-                    {articles}
-                </div>
-            </>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-32 mx-20 xl:mx-64 my-10'>
+                {articles}
+            </div>
         )
     }
 }
