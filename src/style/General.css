@@ -1,3 +1,9 @@
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .navbar{
     width: fit-content;
 }
@@ -115,6 +121,7 @@
 }
 
 .navigation-text{
+    visibility: hidden;
     opacity: 0;
     transition: 500ms;
     position: absolute;
@@ -122,6 +129,7 @@
 }
 
 .navigation-box:hover .navigation-text{
+    visibility: visible;
     opacity: 1;
     transition: 500ms;
     margin-top: -10px;
@@ -134,6 +142,7 @@
 .logo{
     transition: 300ms;
     transform: scale(0);
+    visibility: hidden;
     opacity: 0;
 }
 
@@ -142,6 +151,7 @@
     transition: 300ms;
     transform: scale(1);
     opacity: 1;
+    visibility: visible;
 }
 
 .topbar-content{

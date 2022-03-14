@@ -11,6 +11,7 @@ export default class Github extends Component {
             .then((response) => response.json())
             .then(commitsList => {
                 this.setState({ commits: commitsList });
+                console.log({ commits: commitsList[0] })
         });
     }
     
@@ -19,15 +20,12 @@ export default class Github extends Component {
             <>
                 <div className='flex flex-col gap-10'>
                     {
-                        this.state.commits.map((commit) => (
-                            <div className='text_poppins_200 text-14 letterspacing-1 text-gray-300'>
+                        this.state.commits.map((commit, index) => (
+                            <div key={index} className='text_poppins_200 text-14 letterspacing-1 text-gray-300'>
                                 <div className='flex flex-col gap-5'>
                                     <div className='flex items-center gap-1'>
-                                        <a href={commit.author.html_url} target='_blank' rel="noreferrer" className='flex items-center gap-3 hover:underline'>
-                                            <img src={commit.author.avatar_url} alt="" className='cursor-pointer rounded-full w-7 h-7'/>
-                                            <p className='cursor-pointer'>{commit.commit.committer.name}</p>
-                                        </a>
-                                        <div className='flex gap-1 text_poppins_200'>
+                                        <p className='text_poppins_400'>{commit.commit.committer.name}</p>
+                                        <div className='flex gap-1'>
                                             <p className='text-13 text-gray-400'>committed on {moment(commit.commit.committer.date).format('lll')}</p>
                                         </div>
                                     </div>

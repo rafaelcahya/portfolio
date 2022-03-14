@@ -9,7 +9,6 @@ import UITimelineView from './Timeline/TimelineView';
 export default class Project extends Component {
     constructor() {
         super()
-
         this._handleTabChange = this._handleTabChange.bind(this)
     }
     

@@ -78,7 +78,7 @@ export default class HomeModel extends Component {
             <a href={"" + article.fields.hyperlink} target={'_blank'} rel="noreferrer" className='logo'>
               <img src={"https:" + article.fields.logo.fields.file.url} alt="" width={48} className='rounded-xl'/>
             </a>
-            <div className='box flex gap-1'>
+            <div className='flex gap-1'>
               <span className='pulse h-1.5 w-1.5 bg-green-300 rounded-full'></span>
               <a href={"" + article.fields.hyperlink} target={'_blank'} rel="noreferrer" className='hover:underline'>{article.fields.status}</a>
             </div>

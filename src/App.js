@@ -17,6 +17,7 @@ import Event from './pages/event/Event';
 import Commit from './components/major/github commit/Commit';
 import SingleProject from './pages/project/SingleProject';
 import Offline from './components/major/connection/Offline';
+import SingleChangelog from './components/major/changelog/single/SingleChangelog';
 
 function App() {
     return (
@@ -36,6 +37,7 @@ function App() {
                                 <Route path="/event" exact component={Event}/>
                                 <Route path="/project/progress/:slug" exact component={Commit}/>
                                 <Route path="/offline" exact component={Offline}/>
+                                <Route path="/changelog" exact component={SingleChangelog}/>
                             </Switch>
                         </Router>
                     ) : (<Offline/>)

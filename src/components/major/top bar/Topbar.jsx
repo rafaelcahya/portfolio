@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Changelog from './components/Changelog';
+import Changelog from '../changelog/Changelog';
 import Network from './components/Network';
 import Trend from './components/Trend';
 
