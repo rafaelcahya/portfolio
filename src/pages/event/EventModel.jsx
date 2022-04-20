@@ -5,21 +5,21 @@ export default class EventModel extends Component {
     render() {
         const {article} = this.props
         return (
-            <div className='timeline-item text-gray-300' data-aos="fade-zoom-in" data-aos-duration="500" data-aos-offset="0">
-                <div>
-                    <p className='text-12 text_poppins_200 letterspacing-1'>{moment(article.fields.date).format('ll')}</p>
-                    <p className='text-14 max-w-2xl text_poppins_400'>{article.fields.title}</p>
+            <div className='timeline-item tracking-wide' data-aos="fade-zoom-in" data-aos-duration="500" data-aos-offset="0">
+                <div className='flex flex-col gap-2'>
+                    <p className='text-[13px] jakarta-200'>{moment(article.fields.date).format('ll')}</p>
+                    <p className='text-[14px] max-w-2xl jakarta-400 leading-7'>{article.fields.title}</p>
                 </div>
-                <div className="timeline-item-content gap-4">
+                <div className="timeline-item-content bg-[#E5E7EB] hover:bg-[#dcdee1] dark:bg-black dark:hover:bg-[#0c0c0c] gap-4 text-[#282a2f] dark:text-[#cccbcb] duration-200">
                     <div className='flex justify-between items-center w-full'>
-                        <a href={article.fields.hyperlink} target='_blank' rel='noreferrer' className='text-left text-14 text_poppins_200 letterspacing-1 hover:underline'>{article.fields.source}</a>
+                        <a href={article.fields.hyperlink} target='_blank' rel='noreferrer' className='text-left text-[14px] jakarta-200 hover:underline'>{article.fields.source}</a>
                         <a href={article.fields.hyperlink} target='_blank' rel='noreferrer'>
                             <img src={"https:" + article.fields.sourceLogo.fields.file.url} alt="" className='rounded-xl w-8'/>
                         </a>
                     </div>
                     <img src={"https:" + article.fields.picture.fields.file.url} alt="" className='rounded-xl'/>
-                    <p className='text-left text-14 text_poppins_200 letterspacing-1'>{article.fields.description}</p>
-                    <span className="circle" />
+                    <p className='text-left text-[14px] jakarta-200 leading-7'>{article.fields.description}</p>
+                    <span className="circle bg-[#E5E7EB] dark:bg-[#000]" />
                 </div>
             </div>
         )

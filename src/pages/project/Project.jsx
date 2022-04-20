@@ -17,20 +17,22 @@ export default class Project extends Component {
     render() {
         return (
             <>
+            <div className='bg-[#f9f9f9] dark:bg-black duration-200 min-h-screen'>
                 <Topbar/>
                 <Navbar/>
-                <div className='flex flex-col gap-48 my-48'>
-                    <CurrentlyProjectNote/>
-                    <TabPanel onTabChange={this._handleTabChange}>
-                        <div title="Grid view">
-                            <UIGridView/>
-                        </div>
-                        <div title="Timeline view">
-                            <div className="timeline-container">
-                                <UITimelineView/>
+                    <div className='flex flex-col gap-48 py-48'>
+                        <CurrentlyProjectNote/>
+                        <TabPanel onTabChange={this._handleTabChange}>
+                            <div title="Grid view">
+                                <UIGridView/>
                             </div>
-                        </div>
-                    </TabPanel>
+                            <div title="Timeline view">
+                                <div className="timeline-container after:bg-[#E5E7EB] dark:after:bg-[#282a2f]">
+                                    <UITimelineView/>
+                                </div>
+                            </div>
+                        </TabPanel>
+                    </div>
                 </div>
             </>
         )

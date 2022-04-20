@@ -6,7 +6,6 @@
 }
 
 .timeline-container::after {
-  background-color: #0B0B0B;
   content: '';
   position: absolute;
   left: calc(5% - 3px);
@@ -28,7 +27,6 @@
 .timeline-item-content {
   box-shadow: inset 0px 0px 50px 5px rgba(255, 255, 255, 0.1);
   border-radius: .75rem;
-  background-color: #0B0B0B;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -67,17 +65,11 @@
   }
 }
 
-.timeline-item-content:hover {
-  background-color: #0f0f0f;
-  transition: 200ms;
-}
-
 .timeline-item-content p {
   max-width: 400px;
 }
 
 .timeline-item-content .circle {
-  background-color: black;
   border: 3px solid #5c5c5c;
   border-radius: 50%;
   position: absolute;

@@ -47,8 +47,8 @@ export default class TabPanel extends Component {
             return 'nope';
         }
         return (
-            <div className="tab-panel text-gray-300 flex flex-col gap-10">
-                <div className="tab-panel__header text_poppins text-14 flex justify-center gap-10 cursor-pointer">
+            <div className="tab-panel text-[#282a2f] dark:text-[#cccbcb] duration-200 flex flex-col gap-10">
+                <div className="tab-panel__header jakarta tracking-wide text-[14px] flex justify-center gap-10 cursor-pointer">
                     {this._renderTabs()}
                 </div>
                 <div className="tab-panel__content">

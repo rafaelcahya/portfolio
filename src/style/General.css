@@ -105,11 +105,6 @@ ul{
     }
 }
 
-.navigation{
-    top: 45%;
-    transform: translateY(-45%);
-}
-
 .navigation-button{
     transition: 300ms;
 }
@@ -117,11 +112,11 @@ ul{
 .navigation-button:hover{
     padding: 1rem;
     margin-top: -25px;
-    transition: 300ms;
+    transition: 200ms;
 }
 
 .navigation-text{
-    visibility: hidden;
+    visibility: visible;
     opacity: 0;
     transition: 500ms;
     position: absolute;
@@ -163,4 +158,23 @@ ul{
     padding-top: 1.25rem;
     transition: 300ms;
     opacity: 1;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+
+.underline-animation {
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 0% 1px;
+    padding-bottom: 10px;
+    transition: background-size 500ms ease;
+}
+
+.underline-animation:hover {
+    background-size: 100% 1px;
 }

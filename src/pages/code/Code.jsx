@@ -9,7 +9,7 @@ export default class Code extends Component {
             <>
                 <Topbar/>
                 <Navbar/>
-                <div className='text_poppins_200 text-14 flex flex-col gap-10 text-gray-300 text-center my-48'>
+                <div className='jakarta text-[14px] flex flex-col gap-10 bg-[#f9f9f9] dark:bg-black text-[#282a2f] dark:text-[#cccbcb] duration-200 h-screen text-center py-48'>
                     <p>Not available for now</p>
                     <Jokes/>
                 </div>

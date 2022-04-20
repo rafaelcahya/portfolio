@@ -1,58 +1,62 @@
 @font-face {
-    font-family: poppins_100;
-    src: url('../asset/font/poppins/Poppins-Thin.ttf');
+    font-family: jakarta-100;
+    src: url('../asset/font/static/PlusJakartaSans-ExtraLight.ttf');
 }
 
-.text_poppins_100{
-    font-family: poppins_100;
-    line-height: 1.75rem;
-}
-
-@font-face {
-    font-family: poppins_200;
-    src: url('../asset/font/poppins/Poppins-Light.ttf');
-}
-
-.text_poppins_200{
-    font-family: poppins_200;
-    line-height: 1.75rem;
+.jakarta-100{
+    font-family: jakarta-100;
 }
 
 @font-face {
-    font-family: poppins;
-    src: url('../asset/font/poppins/Poppins-Regular.ttf');
+    font-family: jakarta-200;
+    src: url('../asset/font/static/PlusJakartaSans-Light.ttf');
 }
 
-.text_poppins{
-    font-family: poppins;
-}
-
-@font-face {
-    font-family: poppins_400;
-    src: url('../asset/font/poppins/Poppins-Medium.ttf');
-}
-
-.text_poppins_400{
-    font-family: poppins_400;
-    line-height: 1.75rem;
+.jakarta-200{
+    font-family: jakarta-200;
 }
 
 @font-face {
-    font-family: poppins_500;
-    src: url('../asset/font/poppins/Poppins-SemiBold.ttf');
+    font-family: jakarta;
+    src: url('../asset/font/static/PlusJakartaSans-Regular.ttf');
 }
 
-.text_poppins_500{
-    font-family: poppins_500;
-    line-height: 1.75rem;
+.jakarta{
+    font-family: jakarta;
 }
 
 @font-face {
-    font-family: poppins_700;
-    src: url('../asset/font/poppins/Poppins-Bold.ttf');
+    font-family: jakarta-400;
+    src: url('../asset/font/static/PlusJakartaSans-Medium.ttf');
 }
 
-.text_poppins_700{
-    font-family: poppins_700;
-    line-height: 1.75rem;
+.jakarta-400{
+    font-family: jakarta-400;
+}
+
+@font-face {
+    font-family: jakarta-500;
+    src: url('../asset/font/static/PlusJakartaSans-SemiBold.ttf');
+}
+
+.jakarta-500{
+    font-family: jakarta-500;
+}
+
+@font-face {
+    font-family: jakarta-700;
+    src: url('../asset/font/static/PlusJakartaSans-Bold.ttf');
+}
+
+.jakarta-700{
+    font-family: jakarta-700;
+}
+
+@font-face {
+    font-family: jakarta-800;
+    src: url('../asset/font/static/PlusJakartaSans-ExtraBold.ttf');
+}
+
+.jakarta-800{
+    font-family: jakarta-800;
 }

@@ -30,13 +30,15 @@ export default class Commit extends Component {
                     <div className='fixed top-0'>
                         <Topbar/>
                     </div>
-                    <div className='w-2/4 m-auto'>
-                        <div className='flex flex-col'>
-                            <div className='text-poppins-200 flex justify-between text-gray-300 my-20'>
-                                <p>Commit list</p>
-                                <p>{this.state.article.fields.name}</p>
+                    <div className='flex justify-center min-h-screen bg-[#f9f9f9] text-[#282a2f] dark:text-[#cccbcb] dark:bg-black duration-200 py-20'>
+                        <div className='w-1/2'>
+                            <div className='flex flex-col justify-center gap-20'>
+                                <div className='jakarta-200 flex justify-between'>
+                                    <p>Commit list</p>
+                                    <p>{this.state.article.fields.name}</p>
+                                </div>
+                                <Github/>
                             </div>
-                            <Github/>
                         </div>
                     </div>
                 </>

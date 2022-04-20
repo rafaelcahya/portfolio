@@ -2,11 +2,6 @@ import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 
-import home_icon from '../asset/icon/home.svg'
-import gallery_icon from '../asset/icon/aperture.svg'
-import project_icon from '../asset/icon/layers.svg'
-import code_icon from '../asset/icon/code.svg'
-
 export default function Navbar() {
     AOS.init();
     const [show, setShow] = useState(false);
@@ -32,25 +27,25 @@ export default function Navbar() {
     }, [lastScrollY]);
     return (
         <div className='flex justify-center'>
-            <div className={`navbar frosted_glass fixed top-5 flex items-center gap-7 px-5 py-2 rounded-lg ${show && 'top-5 opacity-0'}`}>
+            <div className={`navbar bg-[#cccdd1] dark:bg-[#42464f] bg-opacity-60 backdrop-filter backdrop-blur-lg z-50 fixed top-5 flex items-center gap-7 px-5 py-2 rounded-lg duration-200 ${show && 'top-5 opacity-0 duration-200'}`}>
                 <Link to="/" >
-                    <div className='p-3 rounded-xl'>
-                        <img src={home_icon} alt="" width={20} />
+                    <div className='p-3.5 rounded-xl'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke_linecap="round" stroke_linejoin="round" className="fill-transparent stroke-[#6B7280] dark:stroke-[#cccbcb] duration-200 stroke-[1.6]"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                     </div>
                 </Link>
                 <Link to="/project">
-                    <div className='p-3 rounded-xl hover:bg-gray-900'>
-                        <img src={project_icon} alt="" width={20} />
+                    <div className='p-3.5 rounded-xl '>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke_linecap="round" stroke_linejoin="round" className="fill-transparent stroke-[#6B7280] dark:stroke-[#cccbcb] duration-200 stroke-[1.6]"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
                     </div>
                 </Link>
                 <Link to="/code">
-                    <div className='p-3 rounded-xl hover:bg-gray-900'>
-                        <img src={code_icon} alt="" width={20} />
+                    <div className='p-3.5 rounded-xl '>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke_linecap="round" stroke_linejoin="round" className="fill-transparent stroke-[#6B7280] dark:stroke-[#cccbcb] duration-200 stroke-[1.6]"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                     </div>
                 </Link>
                 <Link to="/event">
-                    <div className='p-3 rounded-xl hover:bg-gray-900'>
-                        <img src={gallery_icon} alt="" width={20} />
+                    <div className='p-3.5 rounded-xl '>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke_linecap="round" stroke_linejoin="round" className="fill-transparent stroke-[#6B7280] dark:stroke-[#cccbcb] duration-200 stroke-[1.6]"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
                     </div>
                 </Link>
             </div>

@@ -7,16 +7,18 @@ export default class Offline extends Component {
     };
     render() {
         return (
-            <div className='text_poppins text-14 letterspacing-1 absolute left-1/2 -translate-x-1/2 top-48 text-gray-300'>
-                <div className='flex flex-col gap-7'>
-                    <div className='pulse-red w-fit p-4 rounded-full'>
-                        <img src={offline} alt="" width={22}/>
+            <div className='flex h-screen bg-[#f9f9f9] text-[#282a2f] dark:text-[#cccbcb] dark:bg-black duration-200'>
+                <div className='mx-auto my-48 jakarta text-[14px] tracking-wider'>
+                    <div className='flex flex-col gap-7'>
+                        <div className='pulse-red w-fit p-4 rounded-full'>
+                            <img src={offline} alt="" width={22}/>
+                        </div>
+                        <div className='flex flex-col gap-3'>
+                            <p className='text-[25px]'>Are you offline?</p>
+                            <p>It seems there is a problem with your connection. Check your network status.</p>
+                        </div>
+                        <p onClick={this.handleRefresh} className='bg-[#cccdd1] dark:bg-[#42464f] duration-200 px-4 py-2 rounded-md cursor-pointer w-fit'>Refresh</p>
                     </div>
-                    <div className='flex flex-col gap-3'>
-                        <p className='text-25'>Are you offline?</p>
-                        <p>It seems there is a problem with your connection. Check your network status.</p>
-                    </div>
-                    <p onClick={this.handleRefresh} className='bg-zinc-900 hover:bg-zinc-800 px-4 py-2 rounded-md cursor-pointer w-fit'>Refresh</p>
                 </div>
             </div>
         )

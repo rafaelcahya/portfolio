@@ -3,10 +3,14 @@ import client from '../../client';
 import { marked } from 'marked';
 import moment from 'moment'
 
-import back_icon from '../../asset/icon/chevron-left.svg'
-import { Link } from 'react-router-dom';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Mousewheel } from "swiper";
+
 import Loading from '../../components/major/loading/Loading';
-import Topbar from '../../components/major/top bar/Topbar';
+import Navbar from '../../components/Navbar';
 
 export default class SingleProject extends Component {
     constructor(props) {
@@ -32,44 +36,74 @@ export default class SingleProject extends Component {
         return (
             !this.state.article ? <Loading/> : (
                 <>
-                    <div className='fixed top-0'>
-                        <Topbar/>
-                    </div>
-                    <div className='text-gray-300 m-auto flex flex-col items-center gap-20 my-40'>
-                        <Link to="/project" className='frosted_glass fixed top-10 flex items-center gap-5 px-5 py-4 w-1/2 rounded-lg'>
-                            <img src={back_icon} alt="" />
-                            <p className='text_poppins text-14 letterspacing-2'>{this.state.article.fields.title}</p>
-                        </Link>
-                        <div className='text_poppins letterspacing-1 flex flex-col gap-20 w-1/2'>
-                            <img src={"https:" + this.state.article.fields.image.fields.file.url} alt="" className='rounded-xl'/>
-                            <p className='text_poppins text-25 text-center letterspacing-2'>{this.state.article.fields.title}</p>
-                            <div className='flex flex-col gap-5'>
-                                <p className='text-20 text-white'>Description</p>
-                                <p className='text-16 leading-8 textcolor2'>{this.state.article.fields.longDescription}</p>
-                            </div>
-                            <div className='flex flex-col gap-5'>
-                                <p className='text-20 text-white'>Tech Stack</p>
-                                <p className='text-16 leading-8 textcolor2'>{this.state.article.fields.techStack}</p>
-                            </div>
-                            <div className='flex flex-col gap-5'>
-                                <p className='text-20 text-white'>Project Length</p>
-                                <p className='text-16 leading-8 textcolor2'>{this.state.article.fields.projectLength}</p>
-                            </div>
-                            <div className='flex flex-col gap-5'>
-                                <p className='text-20 text-white'>Contributors</p>
-                                <div dangerouslySetInnerHTML={{ __html: marked(this.state.article.fields.contributors) }}className="text-16 leading-8 list-none textcolor2" />
-                            </div>
-                            <div className='text_poppins letterspacing-1 flex justify-between border-t border-gray-900 py-20'>
-                                <div>
-                                    <p className='text-14 text-white'>Posted date</p>
-                                    <p className='text-16 leading-8 textcolor2'>{moment(this.state.article.sys.updatedAt).format('ll')}</p>
+                    <Navbar/>
+                    <div className='bg-[#f9f9f9] text-[#282a2f] dark:text-[#cccbcb] dark:bg-black duration-200 h-screen jakarta tracking-wider overflow-hidden'>
+                        <Swiper
+                            direction={"vertical"}
+                            slidesPerView={1}
+                            spaceBetween={30}
+                            mousewheel={true}
+                            pagination={{
+                                type: "progressbar",
+                                clickable: true,
+                            }}
+                            modules={[Mousewheel, Pagination]}
+                        >
+                            <SwiperSlide >
+                                <div className='flex flex-col gap-20 py-24 px-32'>
+                                    <img src={"https:" + this.state.article.fields.image.fields.file.url} alt="" className='mx-auto w-[650px] rounded-xl'/>
+                                    <div className='flex flex-col gap-2'>
+                                        <p className='text-[#8A8A8A]' data-aos="fade-right">Project name</p>
+                                        <a href={this.state.article.fields.hyperlink} target='_blank' rel="noreferrer" className='jakarta-500 text-[25px] underline-animation bg-gradient-to-r from-cyan-500 to-blue-500 w-fit' data-aos="fade-right" data-aos-delay="200">{this.state.article.fields.title}</a>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p className='text-14 text-white'>Posted by</p>
-                                    <p className='text-16 leading-8 textcolor2'>{this.state.article.fields.postedBy}</p>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='flex h-screen'>
+                                    <div className='m-auto px-32'>
+                                        <p className='text-[#8A8A8A] pb-2'>Description</p>
+                                        <span className='underline-animation bg-gradient-to-r from-cyan-500 to-blue-500 text-[25px] tracking-wider leading-[50px]'>{this.state.article.fields.longDescription}</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='flex h-screen'>
+                                    <div className='flex justify-between items-center px-32 w-3/4'>
+                                        <div className='flex flex-col gap-2'>
+                                            <p className='text-[#8A8A8A]'>Tech Stack</p>
+                                            <p className='underline-animation bg-gradient-to-r from-cyan-500 to-blue-500 text-[25px] tracking-wider'>{this.state.article.fields.techStack}</p>
+                                        </div>
+                                        <div className='flex flex-col gap-2'>
+                                            <p className='text-[#8A8A8A]'>Project Length</p>
+                                            <p className='underline-animation bg-gradient-to-r from-cyan-500 to-blue-500 text-[25px] tracking-wider'>{this.state.article.fields.projectLength}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='flex h-screen'>
+                                    <div className='flex flex-col justify-center gap-2 px-32'>
+                                        <p className='text-[#8A8A8A]'>Contributors</p>
+                                        <div dangerouslySetInnerHTML={{ __html: marked(this.state.article.fields.contributors) }} className="underline-animation bg-gradient-to-r from-cyan-500 to-blue-500 text-[25px] tracking-wider" />
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='flex h-screen'>
+                                    <div className='flex justify-between items-center px-32 w-3/4'>
+                                        <div className='flex flex-col gap-2'>
+                                            <p className='text-[#8A8A8A]'>Posted date</p>
+                                            <p className='underline-animation bg-gradient-to-r from-cyan-500 to-blue-500 text-[25px] tracking-wider'>{moment(this.state.article.sys.updatedAt).format('ll')}</p>
+                                        </div>
+                                        <div className='flex flex-col gap-2'>
+                                            <p className='text-[#8A8A8A]'>Posted by</p>
+                                            <p className='underline-animation bg-gradient-to-r from-cyan-500 to-blue-500 text-[25px] tracking-wider'>{this.state.article.fields.postedBy}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        </Swiper>
+                        {/*  */}
                     </div>
                 </>
             )
