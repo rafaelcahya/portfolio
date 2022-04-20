@@ -24,7 +24,7 @@ export default class HomeModel extends Component {
     AOS.init();
     return (
       <div className='bg-[#f9f9f9] text-[#282a2f] dark:text-[#cccbcb] dark:bg-black duration-200 h-screen jakarta text-[13px] tracking-wide flex flex-col items-center gap-72 py-10'>
-        <div className='reveal'>s
+        <div className='reveal'>
           {
             hour < 10 ? <p>Hello, Good Morning</p> :
             hour < 18 ? <p>Hello, Good Afternoon</p> : 

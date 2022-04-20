@@ -31,7 +31,7 @@ export default class Commit extends Component {
                         <Topbar/>
                     </div>
                     <div className='flex justify-center min-h-screen bg-[#f9f9f9] text-[#282a2f] dark:text-[#cccbcb] dark:bg-black duration-200 py-20'>
-                        <div className='w-1/2'>
+                        <div className='w-full md:w-3/4 xl:w-1/2 px-10'>
                             <div className='flex flex-col justify-center gap-20'>
                                 <div className='jakarta-200 flex justify-between'>
                                     <p>Commit list</p>

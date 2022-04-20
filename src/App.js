@@ -25,7 +25,7 @@ function App() {
     return (
         <ThemeProvider>
             <Background>
-                <div className='fixed top-5 right-10 z-[10000]'>
+                <div className='fixed bottom-10 md:top-10 right-10 z-[10000]'>
                     <Toggle />
                 </div>
                 {

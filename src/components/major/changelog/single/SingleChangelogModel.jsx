@@ -7,20 +7,14 @@ export default class SingleChangelogModel extends Component {
         const {article} = this.props
         return (
             <>
-                <div className='flex flex-col gap-5 border-b border-gray-800 pb-20'>
-                    <div className='text-poppins-200 text-14 textcolor2 flex justify-between'>
+                <div className='flex flex-col gap-5 border-b border-gray-300 dark:border-gray-800 pb-20 tracking-wider'>
+                    <div className='jakarta-500 text-[14px] flex justify-between'>
                         <p>V {article.fields.version}</p>
                         <p>{moment(article.fields.date).format('ll')}</p>
                     </div>
-                    <div className='text-12 flex flex-wrap gap-2 uppercase tracking-wider font-semibold'>
+                    <div className='jakarta text-[12px] text-[#fff] flex flex-wrap gap-2 uppercase'>
                         {
                             article.fields.type.map((type, index) => (
-                                type === "Major" ? (
-                                    <p key={index} className='bg-cyan-600 rounded-md px-4 py-1.5'>{type}</p>
-                                ) :
-                                type === "Minor" ? (
-                                    <p key={index} className='bg-sky-600 rounded-md px-4 py-1.5'>{type}</p>
-                                ) :
                                 type === "UI Design" ? (
                                     <p key={index} className='bg-blue-600 rounded-md px-4 py-1.5'>{type}</p>
                                 ) :
@@ -44,7 +38,7 @@ export default class SingleChangelogModel extends Component {
                             ))
                         }
                     </div>
-                    <div dangerouslySetInnerHTML={{ __html: marked(article.fields.description)}} className="list-none textcolor2" />
+                    <div dangerouslySetInnerHTML={{ __html: marked(article.fields.description)}} className="jakarta text-[14px] list-none" />
                 </div>
             </>
         )

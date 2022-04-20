@@ -31,12 +31,14 @@ export default class SingleChangelog extends Component {
                 <div className='fixed top-0'>
                     <Topbar/>
                 </div>
-                <div className='w-2/4 m-auto text-gray-300'>
-                    <div className='text-poppins-200 text-gray-300 flex justify-between my-20'>
-                        <p>Changelog</p>
-                    </div>
-                    <div className='flex flex-col gap-20'>
-                        {articles}
+                <div className='bg-[#f9f9f9] text-[#282a2f] dark:text-[#cccbcb] dark:bg-black duration-200 min-h-screen flex justify-center m-auto'>
+                    <div className='w-full md:w-3/4 xl:w-1/2 px-10'>
+                        <div className='jakarta-200 flex justify-between py-20'>
+                            <p>Changelog</p>
+                        </div>
+                        <div className='flex flex-col gap-20'>
+                            {articles}
+                        </div>
                     </div>
                 </div>
             </>
