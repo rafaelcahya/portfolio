@@ -17,7 +17,7 @@ export default class Project extends Component {
     render() {
         return (
             <>
-            <div className='bg-[#f9f9f9] dark:bg-black duration-200 min-h-screen'>
+            <div className='bg-[#eceef0] dark:bg-black duration-200 min-h-screen'>
                 <Topbar/>
                 <Navbar/>
                     <div className='flex flex-col gap-48 py-48'>

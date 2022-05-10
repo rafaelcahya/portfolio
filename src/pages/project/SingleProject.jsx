@@ -27,7 +27,6 @@ export default class SingleProject extends Component {
             client.getEntries({content_type: 'project', 'fields.slug': params.slug}).then((response) => {
                 response.items.sort((a,b) => new Date(a.fields.date) > new Date(b.fields.date) ? -1 : 1);
                 this.setState({article: response.items[0]})
-                console.log({article: response.items[0]})
             })
         }
     } 
@@ -37,7 +36,7 @@ export default class SingleProject extends Component {
             !this.state.article ? <Loading/> : (
                 <>
                     <Navbar/>
-                    <div className='bg-[#f9f9f9] text-[#282a2f] dark:text-[#cccbcb] dark:bg-black duration-200 h-screen jakarta tracking-wider overflow-hidden'>
+                    <div className='bg-[#eceef0] text-[#282a2f] dark:text-[#cccbcb] dark:bg-black duration-200 h-screen jakarta tracking-wider overflow-hidden'>
                         <Swiper
                             direction={"vertical"}
                             slidesPerView={1}

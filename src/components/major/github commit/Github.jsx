@@ -42,7 +42,7 @@ export default class Github extends Component {
                             <p className=''>committed on {moment(commit.commit.committer.date).format('lll')}</p>
                         </div>
                     </div>
-                    <p className='border border-gray-300 dark:border-gray-900 rounded-lg p-3'>{commit.commit.message}</p>
+                    <p className='bg-white dark:bg-[#282a2f] rounded-md p-3'>{commit.commit.message}</p>
                 </div>
             </div>
         });
@@ -62,9 +62,9 @@ export default class Github extends Component {
         });
         return (
             <>
-                <div className='flex flex-col gap-10 text-[#282a2f] dark:text-[#cccbcb] duration-200 tracking-wider'>
+                <div className='flex flex-col gap-12 text-[#282a2f] dark:text-[#cccbcb] duration-200 tracking-wider'>
                     {renderTodos}
-                    <div className='flex justify-center gap-4'>
+                    <div className='flex justify-center gap-5'>
                         {renderPageNumbers}
                     </div>
                 </div>

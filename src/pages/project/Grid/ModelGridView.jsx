@@ -13,7 +13,7 @@ export default class ModelGridView extends Component {
                     <img src={"https:" + article.fields.image.fields.file.url} alt="" className='rounded-xl hover:scale-105 transform duration-300'/>
                     <div className='flex justify-between'>
                         <p className='jakarta-200 text-[13px]'>{moment(article.fields.date).format('ll')}</p>
-                        <p className='jakarta text-[15px]'>{article.fields.title}</p>
+                        <p className='jakarta-500 text-[15px]'>{article.fields.title}</p>
                     </div>
                 </div>
             </Link>

@@ -29,7 +29,7 @@ export default class Event extends Component {
             <>
                 <Topbar/>
                 <Navbar/>
-                <div className='bg-[#f9f9f9] text-[#282a2f] dark:text-[#cccbcb] dark:bg-black duration-200 min-h-screen py-48'>
+                <div className='bg-[#eceef0] text-[#282a2f] dark:text-[#cccbcb] dark:bg-black duration-200 min-h-screen py-48'>
                     <div className="timeline-container after:bg-[#E5E7EB] dark:after:bg-[#282a2f] duration-200">
                         {articles}
                     </div>

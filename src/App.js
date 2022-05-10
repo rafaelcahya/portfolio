@@ -19,15 +19,11 @@ import Offline from './components/major/connection/Offline';
 import SingleChangelog from './components/major/changelog/single/SingleChangelog';
 import { ThemeProvider } from './components/major/darkmode/ThemeContext'
 import Background from './components/major/darkmode/Background'
-import Toggle from './components/major/darkmode/ThemeToggle'
 
 function App() {
     return (
         <ThemeProvider>
             <Background>
-                <div className='fixed bottom-10 md:top-10 right-10 z-[10000]'>
-                    <Toggle />
-                </div>
                 {
                     navigator.onLine ? (
                         <Router>

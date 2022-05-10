@@ -7,12 +7,12 @@ const Toggle = () => {
     return (
         <div className="transition duration-500 ease-in-out">
             {theme === 'dark' ? (
-                <div className='bg-gray-200 p-3 rounded-full cursor-pointer' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-sun text-gray-500 text-2xl"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <div className='group p-3 rounded-md cursor-pointer' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="fill-transparent stroke-[#6B7280] group-hover:stroke-[#dcdee1] dark:stroke-[#cccbcb] dark:hover:stroke-[#6B7280] duration-200 stroke-[1.4]"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 </div>
             ) : (
-                <div className='bg-gray-200 p-3 rounded-full cursor-pointer' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-moon text-gray-500 text-2xl"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <div className='group p-3 rounded-md cursor-pointer' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="fill-transparent stroke-[#6B7280] group-hover:stroke-[#dcdee1] dark:stroke-[#cccbcb] dark:hover:stroke-[#6B7280] duration-200 stroke-[1.4]"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </div>
                 )}
         </div>

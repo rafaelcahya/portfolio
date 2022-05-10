@@ -4,14 +4,6 @@ ul{
     gap: 10px;
 }
 
-.navbar{
-    width: fit-content;
-}
-
-.navbar div:hover{
-    background-color: #181818;
-}
-
 .reveal p{
     position: absolute;
     top: 20px;

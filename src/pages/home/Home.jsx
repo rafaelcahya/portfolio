@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import client from '../../client';
 import Loading from '../../components/major/loading/Loading';
-import Topbar from '../../components/major/top bar/Topbar';
 
 import HomeModel from './HomeModel';
 
@@ -26,7 +25,6 @@ export default class Home extends Component {
             return <Loading/>
         }
         return <>
-            <Topbar/>
             {articles}
         </>;
     }
