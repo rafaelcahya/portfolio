@@ -75,7 +75,7 @@ export default class HomeModel extends Component {
             </a>
             <div className='flex gap-1'>
               <span className='pulse h-1.5 w-1.5 bg-green-300 rounded-full'></span>
-              <a href={"" + article.fields.hyperlink} target={'_blank'} rel="noreferrer" className='hover:underline'>{article.fields.status}</a>
+              <a href={"" + article.fields.hyperlink} target={'_blank'} rel="noreferrer" className='hover:underline tracking-wider'>{article.fields.status}</a>
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TabPanel from '../../components/major/tab/TabPanel';
-import Topbar from '../../components/major/top bar/Topbar';
 import Navbar from '../../components/Navbar';
 import CurrentlyProjectNote from './Components/CurrentlyProjectNote';
 import UIGridView from './Grid/GridView';
@@ -18,7 +17,6 @@ export default class Project extends Component {
         return (
             <>
             <div className='bg-[#eceef0] dark:bg-black duration-200 min-h-screen'>
-                <Topbar/>
                 <Navbar/>
                     <div className='flex flex-col gap-48 py-48'>
                         <CurrentlyProjectNote/>
