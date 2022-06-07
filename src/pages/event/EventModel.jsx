@@ -10,7 +10,7 @@ export default class EventModel extends Component {
                     <p className='text-[13px] jakarta-200'>{moment(article.fields.date).format('ll')}</p>
                     <p className='text-[14px] max-w-2xl jakarta-500 leading-7'>{article.fields.title}</p>
                 </div>
-                <div className="timeline-item-content bg-[#E5E7EB] hover:bg-[#dcdee1] dark:bg-black dark:hover:bg-[#0c0c0c] gap-4 text-[#282a2f] dark:text-[#cccbcb] duration-200">
+                <div className="timeline-item-content bg-[#f2f2f7] hover:bg-[#dcdee1] dark:bg-black dark:hover:bg-[#0c0c0c] gap-4 text-[#282a2f] dark:text-[#cccbcb] duration-200">
                     <div className='flex justify-between items-center w-full'>
                         <a href={article.fields.hyperlink} target='_blank' rel='noreferrer' className='text-left text-[14px] jakarta-200 hover:underline'>{article.fields.source}</a>
                         <a href={article.fields.hyperlink} target='_blank' rel='noreferrer'>

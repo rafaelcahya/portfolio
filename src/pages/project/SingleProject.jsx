@@ -36,7 +36,7 @@ export default class SingleProject extends Component {
             !this.state.article ? <Loading/> : (
                 <>
                     <Navbar/>
-                    <div className='bg-[#eceef0] text-[#282a2f] dark:text-[#cccbcb] dark:bg-black duration-200 h-screen jakarta tracking-wider overflow-hidden'>
+                    <div className='bg-[#eceef0] text-[#48484a] dark:text-[#cccbcb] dark:bg-[#121212] duration-200 h-screen jakarta tracking-wider overflow-hidden'>
                         <Swiper
                             direction={"vertical"}
                             slidesPerView={1}

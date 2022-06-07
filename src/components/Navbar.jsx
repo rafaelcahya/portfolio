@@ -29,7 +29,7 @@ export default function Navbar() {
     }, [lastScrollY]);
     return (
         <div className='flex justify-center'>
-            <div className={`w-1/2 bg-[#fff] dark:bg-[#16171a] bg-opacity-60 backdrop-filter backdrop-blur-lg z-50 fixed top-5 flex items-center justify-between px-5 py-2 rounded-md duration-200 ${show && 'top-5 opacity-0 duration-200'}`}>
+            <div className={`w-1/2 bg-[#fff] dark:bg-[#2a2a2a] bg-opacity-60 backdrop-filter backdrop-blur-lg z-50 fixed top-5 flex items-center justify-between px-5 py-2 rounded-md duration-200 hover:shadow-md shadow ${show && 'top-5 opacity-0 duration-200'}`}>
                 <div className='flex gap-5'>
                     <Link to="/" >
                         <div className='group p-3.5 rounded-md'>
