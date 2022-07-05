@@ -1,9 +1,0 @@
-.tab:hover {
-  color: #6D7993;
-}
-
-.tab--selected {
-  border-bottom: 1px solid #D5D5D5;
-  color: #6D7993;
-  z-index: 1;
-}

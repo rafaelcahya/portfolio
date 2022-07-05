@@ -1,31 +1,33 @@
 import React, { Component } from 'react'
-import client from '../../../client'
-
-import Loading from '../loading/Loading'
+import client from '../../client'
+import Loading from '../../components/major/loading/Loading'
 import ChangelogModel from './ChangelogModel'
 
-export default class Changelog extends Component {
-    constructor(props) {
-        super(props)
+export class Changelog extends Component {
+    constructor() {
+        super()
     
         this.state = {
             articles: []
         }
     }
-
+    
     componentDidMount() {
         client.getEntries({content_type: 'changelog'}).then((response) => {
             this.setState({articles: response.items})
         })
     } 
-
     render() {
         const articles = this.state.articles.map((article, i) => <ChangelogModel id={i} key={i} article={article}/>)
         if(!articles){
             return <Loading/>
         }
-        return <div>
-            {articles[0]}
-        </div>
+        return (
+            <div>
+                {articles}
+            </div>
+        )
     }
 }
+
+export default Changelog

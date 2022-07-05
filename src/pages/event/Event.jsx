@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import client from '../../client';
+import TemporaryPage from '../../components/major/Jokes/TemporaryPage';
 import Loading from '../../components/major/loading/Loading';
 import Navbar from '../../components/Navbar';
 
@@ -27,12 +28,7 @@ export default class Event extends Component {
         return (
             <>
                 <Navbar/>
-                <div className='bg-[#eceef0] text-[#282a2f] dark:text-[#cccbcb] dark:bg-black duration-200 min-h-screen py-48'>
-                    <div className="timeline-container after:bg-[#E5E7EB] dark:after:bg-[#282a2f] duration-200">
-                        {articles}
-                    </div>
-                </div>
-                
+                <TemporaryPage/>
             </>
         )
     }

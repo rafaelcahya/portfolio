@@ -13,7 +13,7 @@ export default class GridView extends Component {
         }
     }
 
-    componentDidMount() {
+    componentDidMount() { 
         client.getEntries({content_type: 'project'}).then((response) => {
             response.items.sort((a,b) => new Date(a.fields.date) > new Date(b.fields.date) ? -1 : 1);
             this.setState({articles: response.items})

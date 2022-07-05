@@ -7,7 +7,7 @@ export default class ModelGridView extends Component {
         const {article} = this.props
         AOS.init();
         return (
-            <Link to={`/project/${article.fields.slug}`} data-aos="fade-zoom-in" data-aos-duration="500">
+            <Link to={`/project/${article.fields.slug}`}>
                 <div className='group flex flex-col gap-5 text-[#48484a] dark:text-[#cccbcb] tracking-wide'>
                     <img src={"https:" + article.fields.image.fields.file.url} alt="" className='rounded-md group-hover:scale-105 group-hover:drop-shadow-xl transform duration-300'/>
                     <div className='flex flex-col items-center justify-center gap-3'>

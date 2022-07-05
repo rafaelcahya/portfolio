@@ -36,7 +36,7 @@ export default class SingleProject extends Component {
             !this.state.article ? <Loading/> : (
                 <>
                     <Navbar/>
-                    <div className='bg-[#eceef0] text-[#48484a] dark:text-[#cccbcb] dark:bg-[#121212] duration-200 h-screen jakarta tracking-wider overflow-hidden'>
+                    <div className='bg-[#eceef0] text-[#48484a] dark:text-[#cccbcb] dark:bg-[#10101A] duration-200 h-screen jakarta tracking-wider overflow-hidden'>
                         <Swiper
                             direction={"vertical"}
                             slidesPerView={1}
@@ -51,9 +51,9 @@ export default class SingleProject extends Component {
                             <SwiperSlide >
                                 <div className='flex flex-col gap-20 py-24 px-32'>
                                     <img src={"https:" + this.state.article.fields.image.fields.file.url} alt="" className='mx-auto w-[650px] rounded-xl'/>
-                                    <div className='flex flex-col gap-2'>
-                                        <p className='text-[#8A8A8A]' data-aos="fade-right">Project name</p>
-                                        <a href={this.state.article.fields.hyperlink} target='_blank' rel="noreferrer" className='jakarta-500 text-[25px] underline-animation bg-gradient-to-r from-cyan-500 to-blue-500 w-fit' data-aos="fade-right" data-aos-delay="200">{this.state.article.fields.title}</a>
+                                    <div>
+                                        <p className='text-[#8A8A8A] pb-2' data-aos="fade-right">Project name</p>
+                                        <a href={this.state.article.fields.hyperlink} target='_blank' rel="noreferrer" className='jakarta-500 text-[25px] underline-animation bg-gradient-to-r from-cyan-500 to-blue-500'>{this.state.article.fields.title}</a>
                                     </div>
                                 </div>
                             </SwiperSlide>
