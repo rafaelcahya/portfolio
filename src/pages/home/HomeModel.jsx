@@ -68,6 +68,9 @@ export default class HomeModel extends Component {
             </div>
           </div>
         </div>
+        <div className='absolute bottom-0 bg-orange-600 text-center w-full'>
+          <p className='jakarta-500 py-2 text-white tracking-wider'>Currently under development</p>
+        </div>
       </div>
     )
   }

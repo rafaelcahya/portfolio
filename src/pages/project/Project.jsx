@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import TemporaryPage from '../../components/major/Jokes/TemporaryPage';
 import Navbar from '../../components/Navbar';
 import CurrentlyProjectNote from './Components/CurrentlyProjectNote';
 import UIGridView from './Grid/GridView';
@@ -9,11 +8,10 @@ export default class Project extends Component {
         return (
             <div className='bg-[#f2f2f7] dark:bg-[#10101A] duration-200'>
                 <Navbar/>
-                <TemporaryPage/>
-                {/* <div className='flex flex-col gap-48 py-48'>
+                <div className='flex flex-col gap-48 py-48'>
                     <CurrentlyProjectNote/>
                     <UIGridView/>
-                </div> */}
+                </div>
             </div>
         )
     }
