@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import TemporaryPage from '../../components/major/Jokes/TemporaryPage';
 import Navbar from '../../components/Navbar';
+import CodeList from '../code/code list/CodeList';
 
 export default class Code extends Component {
     render() {
         return (
             <>
-                <Navbar/>
-                <TemporaryPage/>
+                <div className='h-screen duration-200'>
+                    <Navbar/>
+                    <CodeList/>
+                </div>
             </>
         )
     }

@@ -5,11 +5,10 @@ import AOS from 'aos';
 export default class ModelGridView extends Component {
     render() {
         const {article} = this.props
-        console.log(article)
         AOS.init();
         return (
             <Link to={`/project/${article.fields.slug}`}>
-                <div className='group flex flex-col gap-5 text-[#48484a] dark:text-[#cccbcb] tracking-wide'>
+                <div className='group flex flex-col gap-5 text-[#282a2f] dark:text-[#cccbcb]'>
                     {
                         !article.fields.displayImage ? (
                             <p></p>

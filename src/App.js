@@ -11,13 +11,14 @@ import 'aos/dist/aos.css';
 
 import Home from './pages/home/Home'
 import Project from './pages/project/Project';
-import Code from './pages/code/Code';
-import Event from './pages/event/Event';
 import SingleProject from './pages/project/SingleProject';
+import Code from './pages/code/Code';
+import SingleCode from './pages/code/SingleCode';
 import Offline from './components/major/connection/Offline';
 import { ThemeProvider } from './components/major/darkmode/ThemeContext'
 import Background from './components/major/darkmode/Background'
 import Journey from './pages/journey/Journey'
+
 import { Detector } from 'react-detect-offline'
 
 function App() {
@@ -33,8 +34,8 @@ function App() {
                                         <Route path='/' exact component={Home} />
                                         <Route path="/project" exact component={Project}/>
                                         <Route path="/project/:slug" component={SingleProject}/>
-                                        <Route path="/code"  component={Code}/>
-                                        <Route path="/event"  component={Event}/>
+                                        <Route path="/code" exact component={Code}/>
+                                        <Route path="/code/:slug" component={SingleCode}/>
                                         <Route path={`/offline/${(Math.random().toString(16)+'00000000000000000').slice(2, 7)}`} component={Offline}/>
                                         <Route path="/journey"  component={Journey}/>
                                     </Switch>

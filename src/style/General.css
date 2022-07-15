@@ -161,7 +161,6 @@ ul{
 }
 
 .linear-wipe {
-    text-align: center;
     background: linear-gradient(to right, #ff9b9b 20%, #CDF2CA 40%, #9ADCFF 60%, #ff9b9b 80%);
     background-size: 200% auto;
     color: #000;

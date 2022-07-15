@@ -58,3 +58,71 @@
     visibility: visible;
     transform: translateY(15px);
 }
+
+.dark .markdown{
+    color: #d2d6dd
+}
+
+.markdown h3{
+    font-size: 18px;
+}
+
+.markdown pre{
+    padding: 20px 0;
+}
+
+.markdown hr{
+    height: 1px;
+    border: none;
+    background-color: #dadada;
+    margin: 50px 0;
+}
+
+.dark .markdown hr{
+    background-color: #343638;
+}
+
+
+.dark .markdown pre, .dark .markdown code { 
+    background-color: #22262b;
+}
+
+.markdown pre{
+    overflow-x: auto;
+    word-wrap: normal;
+    background-color: #eaeaef;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: max-content;
+    white-space: nowrap;
+}
+
+.markdown code{
+    background-color: #eaeaef;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.markdown ol{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.markdown ol li{
+    list-style-type: decimal;
+    margin-left: 40px;
+}
+
+.markdown blockquote{
+    background-color: #D9EEE1;
+    border-left: 3px solid #34A853;
+    padding: 20px;
+    margin: 75px 0;
+    font-style: italic;
+}
+
+.dark .markdown blockquote{
+    color: #000000
+}
